@@ -6,25 +6,26 @@
     <title>JavaScript and DOM API</title>
     <link rel="stylesheet" type="text/css" href="game.css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <script src="game.js"></script>
     <noscript>
         Warning - JavaScript is Disabled.
         For full functionality of this page, it is neccessary to enable JavaScript.
     </noscript>
-    
     <script>
         var bear;
+        var bees;
+        var dBear;
+        var newStingtype;
     </script>
-
-
-    <body onload="start();">
+    <body onload = "start();">
 
         <div id="title">
             <h1>Help the bear escape the bees !</h1>
-            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3"> bees by running and jumping. The objective is to have as less stings as possible!</p>
-            <p>You can ajust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
-                <br> and the refresh period <input type="text" id="periodTimer" value="10" size="3"> ms </p>
+            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3" onchange="makeBees()"> bees by running and jumping. The objective is to have as less stings as possible!</p>
+            <p>You can adjust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
+                <br> and the bear's speed <input type="text" id="speedBear" value="100" size="3" onchange="Bear.setSpeed()"> px/ms
+                <br> and the refresh period of the bees <input type="text" id="periodTimer" value="10" size="3"> ms </p>
+            <p>Press this button => <button onclick="restart()">Restart</button> to restart the game. </p>
             <h2>Press left, right, up, down keys to move the bear</h2>
 
         </div>
@@ -35,7 +36,7 @@
                         <p>Stings: [<span id="hits">0</span>]</p>
                     </td>
                     <td>
-                        <p>Best duration: [<span id="duration">?</span>]</p>
+                        <p>Best duration: [<span id="duration">0</span>] milliseconds </p>
                     </td>
                 </tr>
             </table>
@@ -46,4 +47,4 @@
         </div>
     </body>
 
-</html><head>
+</html>

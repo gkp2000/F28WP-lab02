@@ -1,1 +1,3 @@
 # F28WP-lab02
+
+This lab consists of developing a single user webpage game. The game is comprised of a user-controlled bear character that tries to escape getting stung by computer-controlled bees. The game allows the addition of more bees as well as manipulation of the speeds of the bear and the bees as well as refresh period of the bees. Scores are also displayed. There is client-side programming using HTML,CSS and JavaScript and uses a lot of DOM API.
